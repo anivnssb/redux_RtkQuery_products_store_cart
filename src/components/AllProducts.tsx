@@ -1,5 +1,5 @@
 import React from "react";
-import { Product, useGetAllProductQuery } from "../store/dummyProducts";
+import { useGetAllProductQuery } from "../store/dummyProducts";
 
 const AllProducts: React.FC = () => {
   const { data, isLoading, error } = useGetAllProductQuery();
@@ -8,7 +8,7 @@ const AllProducts: React.FC = () => {
       {isLoading ? <h1>Loading...</h1> : ""}
       {error ? <h1>{"Error.message"}</h1> : ""}
       <div className="product-container">
-        {data?.products?.map((product: Product) => (
+        {data?.products?.map((product) => (
           <div className="product-card" key={product.id}>
             <img src={product.images[0]} alt="" />
             <h1>{product.title}</h1>
