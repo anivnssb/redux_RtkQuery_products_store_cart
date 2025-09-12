@@ -11,6 +11,7 @@ ul li {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   justify-items: center;
+  margin: 6rem 0 4rem 0;
 }
 .product-card {
   display: flex;
@@ -31,12 +32,12 @@ ul li {
 }
 .navbar {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   background-color: black;
   height: 50px;
   padding: 0 10px;
-  margin-bottom: 10px;
 }
 .navbar ul {
   display: flex;
